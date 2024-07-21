@@ -1,0 +1,251 @@
+/* The standard size of a credit card is 85.6 mm wide (3.375 in) x 53.98 mm high (2.125 in). 
+They all have rounded corners with a radius of 2.88 mm (0.113 in) to 3.38 mm (0.137 in) 
+and a uniform thickness of 0.76 mm (0.029 in). */
+
+/* color palette for credit card: https://coolors.co/palette/03045e-0077b6-00b4d8-90e0ef-caf0f8 */
+/* color palette for UPI: https://coolors.co/palette/10002b-240046-3c096c-5a189a-7b2cbf-9d4edd-c77dff-e0aaff */
+
+body {
+  margin: 0;
+  padding-top: 8px;
+  font-family: "Titillium Web", sans-serif;
+}
+
+#logoutDiv {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#logout {
+  border: none;
+  color: #ffffff;
+  background-color: red;
+  font-size: 18px;
+  height: 35px;
+  width: 100px;
+  border-radius: 5px;
+  margin: 48px;
+}
+
+#logout:hover {
+  background-color: rgb(230, 2, 2);
+}
+
+#logout:active {
+  background-color: #ffeaae;
+}
+
+.mainSection,
+.loginSection {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+.loginSection {
+  margin-top: 64px;
+  padding: 0 40px;
+  height: 250px;
+  align-items: center;
+}
+.box {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  height: 350px;
+  width: 400px;
+  box-shadow: 2px 2px 8px 3px;
+  border-radius: 10px;
+}
+.box form {
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.loginForm button {
+  margin: 5px;
+  border: none;
+  width: 75px;
+  height: 25px;
+  font-weight: 600;
+  border-radius: 5px;
+  background-color: #04a777;
+}
+
+.loginForm input {
+  border: none;
+  background-color: #ffeaae;
+  border-radius: 5px;
+  padding-left: 5px;
+  height: 25px;
+  width: 200px;
+}
+
+.loginForm div {
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+}
+
+#signUp,
+#login {
+  color: #ff0000;
+}
+#signUp:hover,
+#login:hover {
+  color: #04a777;
+  cursor: pointer;
+}
+
+body h1 {
+  font-size: 48px;
+  margin: 6px 0 12px;
+}
+
+.bankApp {
+  width: 1260px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.creditCard,
+.upi {
+  padding: 8px 12px;
+  margin: 12px;
+  width: 550px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px;
+}
+
+.positive {
+  color: green;
+  font-weight: 700;
+}
+
+.negative {
+  color: red;
+  font-weight: 700;
+}
+
+.ccTransactions,
+.upiTransactions {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.ccTransactions p,
+.upiTransactions p {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+.error {
+  font-size: 16px;
+  position: absolute;
+  top: -24px;
+  right: 0;
+  font-weight: 600;
+  color: red;
+}
+
+.confirm {
+  font-size: 16px;
+  position: absolute;
+  top: -24px;
+  right: 0;
+  font-weight: 600;
+  color: green;
+}
+
+.hide {
+  visibility: hidden;
+  display: none;
+  height: 0;
+}
+
+@media screen and (max-width: 600px) {
+  .bankApp {
+    width: 100%;
+  }
+
+  .creditCard,
+  .upi {
+    width: 100%;
+  }
+
+  .ccTransactions,
+  .upiTransactions {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1107px) {
+  .bankApp {
+    /* flex-flow: column; */
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  body h1 {
+    font-size: 34px;
+  }
+}
+
+button {
+  box-shadow: 0 0;
+}
+
+input {
+  box-shadow: 0 0;
+}
+
+button:active {
+  opacity: 0.8;
+}
+
+button:hover,
+input:focus-visible {
+  border: none;
+  box-shadow: 0px 0px 5px;
+  transition: box-shadow 100ms ease-out;
+}
+
+h1 {
+  width: 100%;
+  text-align: center;
+}
+
+p,
+div,
+h1,
+h2,
+h3,
+h4 {
+  padding: 0;
+  margin: 0;
+}
+
+.functionsBox {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  width: 45%;
+  height: 84px;
+  border-radius: 10px;
+  position: relative;
+}
+
+/* .creditCard,
+.upi {
+  background-color: rgb(248, 244, 239);
+} */

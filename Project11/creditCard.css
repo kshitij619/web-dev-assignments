@@ -1,0 +1,138 @@
+.card {
+  background-image: linear-gradient(to right, #00b4d8, #0077b6, #03045e);
+  color: white;
+  /* width: 3.375in; */
+  /* height: 2.125in; */
+  width: 526px;
+  height: 300px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 0 12px;
+}
+
+.available {
+  display: flex;
+  justify-content: space-between;
+}
+
+#availableLimitText {
+  font-size: 14px;
+}
+
+#cardNumber {
+  font-size: 18px;
+}
+
+#availableLimitRupees {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+#bar {
+  width: 100%;
+  height: 6px;
+  border-radius: 8px;
+  background-color: white;
+  border: 1px solid white;
+  margin: 6px 0;
+}
+
+#progress {
+  width: 0%;
+  height: 6px;
+  border-radius: 8px;
+  background-image: linear-gradient(to bottom, #00b4d8, #0077b6, #03045e);
+}
+
+.limitUtilized {
+  display: flex;
+  justify-content: space-between;
+}
+
+.limitUtilized span {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.limitUtilized h4 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.memeClass {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.memeClass h3 {
+  font-size: 24px;
+}
+
+#meme {
+  height: 64px;
+  text-align: right;
+}
+
+.functions {
+  width: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  margin: 24px 0;
+}
+
+.buy,
+.pay {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  margin: 24px 0;
+}
+
+.functionsBox {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  width: 45%;
+  height: 84px;
+  border-radius: 10px;
+}
+
+.text {
+  background-color: #0077b6;
+  padding: 6px;
+  height: 72px;
+  color: white;
+}
+
+.ccTransactions {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.functionsBox input,
+.functionsBox button {
+  height: 36px;
+  border-radius: 8px;
+  border: none;
+  color: #03045e;
+  font-weight: 600;
+}
+
+.functionsBox button {
+  background-color: #90e0ef;
+}
+
+.functionsBox input {
+  background-color: #caf0f8;
+  padding-left: 8px;
+}
+
+.functionsBox input::placeholder {
+  color: #0077b6;
+  font-weight: 400;
+}

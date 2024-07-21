@@ -1,0 +1,38 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+table,
+th,
+td,
+tr {
+  border: 2px solid rosybrown;
+}
+th a {
+  color: black;
+}
+
+h1 {
+  font-family: fantasy;
+  font-weight: 200;
+}
+
+h2 {
+  display: inline;
+  background-color: greenyellow;
+}
+
+h3 {
+  color: yellow;
+  background-color: blue;
+  display: inline;
+}
+
+.contacts {
+  text-decoration: none;
+  font-family: "Courier New", Courier, monospace;
+}
+
+#github {
+  color: rgb(30, 210, 60);
+}

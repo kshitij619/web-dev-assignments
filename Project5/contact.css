@@ -1,0 +1,45 @@
+body {
+  font-size: 32px;
+  float: right;
+}
+
+.first-div {
+  display: block;
+}
+
+.first-div label {
+  width: 120px;
+  clear: left;
+  text-align: right;
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
+
+.first-div input,
+.first-div label {
+  float: left;
+  height: 32px;
+}
+
+.first-div input {
+  border: 0;
+  border-radius: 10px;
+  padding-left: 10px;
+  background-color: aliceblue;
+  color: purple;
+  font-size: 12px;
+}
+
+.second-div {
+  clear: left;
+}
+
+.second-div input {
+  width: 500px;
+}
+
+@media screen and (max-width: 599px) {
+  body {
+    margin: 10px 5vw !important;
+  }
+}

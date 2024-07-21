@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .game {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        button {
+            margin: 5vh;
+            height: 10vh;
+            width: 20vh;
+            font-size: 3vh;
+            border-radius: 10vh;
+            background-color: deepskyblue;
+            color: aliceblue;
+        }
+
+        .board {
+            display: flex;
+            flex-direction: column;
+            margin: 10vh;
+            border-top: 2vh solid black;
+            border-left: 2vh solid black;
+            border-right: 2vh solid rgb(100, 100, 100);
+            border-bottom: 2vh solid rgb(100, 100, 100);
+
+        }
+
+        .board div {
+            display: flex;
+
+        }
+
+        .board div div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .block {
+            height: 10vh;
+            width: 10vh;
+        }
+
+        .white {
+            background: bisque;
+        }
+
+        .black {
+            background: rgb(181, 95, 64);
+        }
+
+        .rook,
+        .knight,
+        .bishop,
+        .queen,
+        .king {
+            height: 8vh;
+        }
+
+        .pawn {
+            height: 8vh;
+        }
+
+        @media screen and (max-width: 860px) {
+
+            button {
+                margin: 5vw;
+                height: 10vw;
+                width: 20vw;
+                font-size: 3vw;
+                border-radius: 10vw;
+            }
+
+            .board {
+                margin: 5vw 0 0 5vw;
+                border-top: 2vw solid black;
+                border-left: 2vw solid black;
+                border-right: 2vw solid rgb(100, 100, 100);
+                border-bottom: 2vw solid rgb(100, 100, 100);
+            }
+
+            .block {
+                height: 10vw;
+                width: 10vw;
+            }
+
+            .rook,
+            .knight,
+            .bishop,
+            .queen,
+            .king {
+                height: 8vw;
+            }
+
+            .pawn {
+                height: 8vw;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="game">
+        <div class="board">
+            <div>
+                <div class="block white"><img class="rook" src="./images/rookB.png" alt="Black rook"></div>
+                <div class="block black"><img class="knight" src="./images/knightB.png" alt="Black knight">
+                </div>
+                <div class="block white"><img class="bishop" src="./images/bishopB.png" alt="Black bishop">
+                </div>
+                <div class="block black"><img class="queen" src="./images/queenB.png" alt="Black queen" height="90em">
+                </div>
+                <div class="block white"><img class="king" src="./images/kingB.png" alt="Black king" height="90em">
+                </div>
+                <div class="block black"><img class="bishop" src="./images/bishopB.png" alt="Black bishop">
+                </div>
+                <div class="block white"><img class="knight" src="./images/knightB.png" alt="Black knight">
+                </div>
+                <div class="block black"><img class="rook" src="./images/rookB.png" alt="Black rook"></div>
+            </div>
+
+            <div>
+                <div class="block black"><img class="pawn" src="./images/pawnB.png" alt="Black pawn"></div>
+                <div class="block white"><img class="pawn" src="./images/pawnB.png" alt="Black pawn"></div>
+                <div class="block black"><img class="pawn" src="./images/pawnB.png" alt="Black pawn"></div>
+                <div class="block white"><img class="pawn" src="./images/pawnB.png" alt="Black pawn"></div>
+                <div class="block black"><img class="pawn" src="./images/pawnB.png" alt="Black pawn"></div>
+                <div class="block white"><img class="pawn" src="./images/pawnB.png" alt="Black pawn"></div>
+                <div class="block black"><img class="pawn" src="./images/pawnB.png" alt="Black pawn"></div>
+                <div class="block white"><img class="pawn" src="./images/pawnB.png" alt="Black pawn"></div>
+            </div>
+
+            <div>
+                <div class="block white"></div>
+                <div class="block black"></div>
+                <div class="block white"></div>
+                <div class="block black"></div>
+                <div class="block white"></div>
+                <div class="block black"></div>
+                <div class="block white"></div>
+                <div class="block black"></div>
+            </div>
+
+            <div>
+                <div class="block black"></div>
+                <div class="block white"></div>
+                <div class="block black"></div>
+                <div class="block white"></div>
+                <div class="block black"></div>
+                <div class="block white"></div>
+                <div class="block black"></div>
+                <div class="block white"></div>
+            </div>
+
+            <div>
+                <div class="block white"></div>
+                <div class="block black"></div>
+                <div class="block white"></div>
+                <div class="block black"></div>
+                <div class="block white"></div>
+                <div class="block black"></div>
+                <div class="block white"></div>
+                <div class="block black"></div>
+            </div>
+
+            <div>
+                <div class="block black"></div>
+                <div class="block white"></div>
+                <div class="block black"></div>
+                <div class="block white"></div>
+                <div class="block black"></div>
+                <div class="block white"></div>
+                <div class="block black"></div>
+                <div class="block white"></div>
+            </div>
+
+            <div>
+                <div class="block white"><img class="pawn" src="./images/pawnW.png" alt="White pawn"></div>
+                <div class="block black"><img class="pawn" src="./images/pawnW.png" alt="White pawn"></div>
+                <div class="block white"><img class="pawn" src="./images/pawnW.png" alt="White pawn"></div>
+                <div class="block black"><img class="pawn" src="./images/pawnW.png" alt="White pawn"></div>
+                <div class="block white"><img class="pawn" src="./images/pawnW.png" alt="White pawn"></div>
+                <div class="block black"><img class="pawn" src="./images/pawnW.png" alt="White pawn"></div>
+                <div class="block white"><img class="pawn" src="./images/pawnW.png" alt="White pawn"></div>
+                <div class="block black"><img class="pawn" src="./images/pawnW.png" alt="White pawn"></div>
+            </div>
+
+            <div>
+                <div class="block black"><img class="rook" src="./images/rookW.png" alt="White rook"></div>
+                <div class="block white"><img class="knight" src="./images/knightW.png" alt="White knight">
+                </div>
+                <div class="block black"><img class="bishop" src="./images/bishopW.png" alt="White bishop">
+                </div>
+                <div class="block white"><img class="queen" src="./images/queenW.png" alt="White queen" height="90em">
+                </div>
+                <div class="block black"><img class="king" src="./images/kingW.png" alt="White king" height="90em">
+                </div>
+                <div class="block white"><img class="bishop" src="./images/bishopW.png" alt="White bishop">
+                </div>
+                <div class="block black"><img class="knight" src="./images/knightW.png" alt="White knight">
+                </div>
+                <div class="block white"><img class="rook" src="./images/rookW.png" alt="White rook"></div>
+            </div>
+        </div>
+
+        <div>
+            <button>Start Game</button>
+        </div>
+    </div>
+
+</body>
+
+</html>

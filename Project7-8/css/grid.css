@@ -1,0 +1,103 @@
+.grid {
+  padding: 64px 32px;
+  background-color: #fff;
+  text-align: center;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+p {
+  padding: 32px 0;
+}
+.grid-items {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+}
+
+.grid-items div {
+  width: 171px;
+  height: 102px;
+  text-align: center;
+  margin: 1px 1px;
+  background-color: #f9fafb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.transistor {
+  width: 107px;
+  height: 27.81px;
+}
+
+.mirage {
+  width: 107px;
+  height: 29.29px;
+}
+
+.statickit {
+  width: 106.95px;
+  height: 24.17px;
+}
+
+.tuple {
+  width: 104.78px;
+  height: 39px;
+}
+
+.laravel {
+  width: 107px;
+  height: 31.67px;
+}
+
+.statamic {
+  width: 107px;
+  height: 18.54px;
+}
+
+@media screen and (min-width: 600px) {
+  .grid-items {
+    width: 1220px;
+    height: 226px;
+  }
+
+  .grid-items div {
+    width: 404px;
+    height: 112px;
+  }
+
+  .transistor {
+    width: 158px;
+    height: 41.71px;
+  }
+
+  .mirage {
+    width: 138px;
+    height: 38px;
+  }
+
+  .statickit {
+    width: 126.94px;
+    height: 29px;
+  }
+
+  .tuple {
+    width: 104.78px;
+    height: 39px;
+  }
+
+  .laravel {
+    width: 136px;
+    height: 40px;
+  }
+
+  .statamic {
+    width: 147px;
+    height: 25.43px;
+  }
+}

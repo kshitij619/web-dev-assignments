@@ -1,0 +1,70 @@
+body {
+  margin: 0;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: "Work Sans", sans-serif;
+}
+
+h1,
+p {
+  margin: 0;
+}
+
+h1 {
+  font-size: 32px;
+  margin: 10px;
+}
+
+p {
+  font-size: 16px;
+  margin: 10px;
+}
+
+button {
+  font-size: 16px;
+  width: 200px;
+  height: 50px;
+}
+
+.btns {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.upi button {
+  background-color: aqua;
+  color: black;
+}
+
+.credit-card button {
+  background-color: red;
+  color: white;
+}
+
+button {
+  border-radius: 10px;
+  margin: 10px;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.upi,
+.credit-card {
+  width: 500px;
+}
+
+span {
+  color: blue;
+  font-weight: 600;
+}
+
+span:hover {
+  cursor: pointer;
+  font-weight: 800;
+  text-decoration: underline;
+}

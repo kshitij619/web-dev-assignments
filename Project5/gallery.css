@@ -1,0 +1,17 @@
+.main,
+.col2,
+.col12,
+.col3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.row12,
+.row34,
+.row4 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

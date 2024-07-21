@@ -1,0 +1,140 @@
+.sec3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 50px 12px;
+  background-color: #fff;
+}
+
+h4 {
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 23.4px;
+  text-align: center;
+  margin: 0;
+
+  background: -webkit-linear-gradient(7.1deg, #c41740, #ea9c28);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.footer-line {
+  padding: 0 16px;
+
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center;
+  margin: 10px 0;
+  color: #475467;
+}
+
+.btn {
+  width: 343px;
+  height: 112px;
+  position: static;
+  margin: 20px 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sub-input {
+  width: 333px;
+  height: 50px;
+  border-radius: 8px;
+  border: 1px;
+  opacity: 0px;
+  border: 1px solid #d0d5dd;
+  margin: 0;
+  padding: 0 5px 0;
+
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  text-align: left;
+  color: #98a2b3;
+}
+
+.footer {
+  position: static;
+  margin: 1px 0;
+  width: 343px;
+  height: 50px;
+  border-radius: 8px;
+  background-color: #1d2939;
+
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  text-align: center;
+  color: #fff;
+}
+
+.cr {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 1px 0px 0px #1e28341f inset;
+  width: 100%;
+  height: 58px;
+  padding: 20px 0px;
+}
+.copyright {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+}
+@media screen and (min-width: 600px) {
+  h4 {
+    font-size: 28px;
+    font-weight: 900;
+    line-height: 36.4px;
+    text-align: center;
+    margin: 0;
+
+    background: -webkit-linear-gradient(7.1deg, #c41740, #ea9c28);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .footer-line {
+    width: 472px;
+    height: 56px;
+
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+  }
+
+  .btn {
+    width: 400px;
+    height: 50px;
+    position: relative;
+    margin: 20px 0;
+
+    display: inline;
+  }
+
+  .sub-input {
+    width: 260px;
+    height: 50px;
+    border: 1px solid #d0d5dd;
+    margin: 0;
+    padding: 0 5px 0;
+  }
+
+  .footer {
+    position: absolute;
+    right: 0;
+    width: 136px;
+    height: 50px;
+    border-radius: 0px 8px 8px 0px;
+  }
+
+  .cr {
+    height: 100px;
+  }
+}

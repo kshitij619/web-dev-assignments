@@ -1,0 +1,83 @@
+.banner-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: Hug (326px);
+  padding: 0 40px;
+}
+
+.left-banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0px 64px 0px 32px;
+  width: 50%;
+  gap: 40px;
+}
+
+.right-banner {
+  width: 50%;
+}
+
+.banner-img {
+  width: 100%;
+}
+
+.black-txt,
+.blue-txt {
+  font-size: 60px;
+  font-weight: 800;
+  line-height: 60px;
+  letter-spacing: -0.025em;
+  display: inline-block;
+  text-align: left;
+}
+
+.black-txt {
+  color: #111827;
+}
+
+.blue-txt {
+  color: #4f46e5;
+}
+
+.left-banner p {
+  color: #6b7280;
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+  text-align: left;
+}
+
+.get-started,
+.demo {
+  height: Hug (62px) px;
+  padding: 17px 41px 17px 41px;
+  gap: 0px;
+  border: none;
+  border-radius: 6px;
+  opacity: 0px;
+
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 28px;
+  text-align: left;
+
+  box-shadow: 0px 1px 2px 0px #0000000f;
+  box-shadow: 0px 1px 3px 0px #0000001a;
+}
+
+.get-started {
+  width: Hug (181px) px;
+  background-color: #4f46e5;
+  color: #fff;
+}
+
+.demo {
+  width: Hug (171px) px;
+  background-color: #fff;
+  color: #4f46e5;
+}

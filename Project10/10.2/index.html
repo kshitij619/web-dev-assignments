@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apna Bank</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="upi">
+      <h1>UPI</h1>
+      <div class="btns">
+        <button onclick="upiPay()">Pay Someone</button>
+        <button onclick="upiAdd()" onclick="">Add Money</button>
+        <button onclick="upiViewBal()">Check Balance</button>
+      </div>
+      <p>
+        To get UPI transaction history,
+        <span onclick="upiViewTrans()">click here</span>.
+      </p>
+    </div>
+
+    <div class="credit-card">
+      <h1>Credit Card</h1>
+      <p>Limit of Credit Card is: ₹1,00,000</p>
+      <div class="btns">
+        <button onclick="ccBuy()">Buy Something</button>
+        <button onclick="ccPendingBalance()">Pending Balance</button>
+        <button onclick="ccCheckBill()">Check bill</button>
+        <button onclick="ccPayBill()">Pay Bill</button>
+      </div>
+      <p>
+        To get Credit Card transaction history,
+        <span onclick="ccViewTrans()">click here</span>.
+      </p>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

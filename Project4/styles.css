@@ -1,0 +1,83 @@
+body {
+  margin: 50px 350px;
+  background-image: url(https://images.ctfassets.net/pdf29us7flmy/6DlGmQnbGA55JqsuhBCd1E/1cd8c47139818383bf8d3802f970bc3e/CV-TEMPLATES-FINAL-JULY-01.png);
+  background-repeat: inherit;
+  background-size: cover;
+  background-position: fixed;
+  color: aliceblue;
+}
+
+nav {
+  font-size: 24px;
+  text-align: center;
+  margin: 20px 0;
+  padding: 30px;
+}
+nav a {
+  padding: 15px;
+  text-decoration: none;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: beige;
+}
+
+nav a:hover {
+  background-color: white;
+}
+
+.intro {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+  font-size: 24px;
+  padding-bottom: 25px;
+  border-bottom: 2px solid aliceblue;
+}
+
+.intro img {
+  border: 5px solid cyan;
+  border-radius: 50%;
+  height: 250px;
+}
+
+.titles {
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.edutech {
+  display: flex;
+  justify-content: space-around;
+}
+
+ul {
+  list-style-type: upper-roman;
+}
+
+a {
+  text-decoration: none;
+  color: red;
+}
+
+a:visited {
+  color: greenyellow;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: orange;
+}
+
+.technical {
+  text-align: left;
+}
+
+table,
+th,
+td,
+tr {
+  border: 2px solid yellow;
+}
+
+th a {
+  color: black;
+}

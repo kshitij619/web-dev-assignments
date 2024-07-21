@@ -1,0 +1,133 @@
+body {
+  margin: 50px 15%;
+  background-image: url(https://asset.gecdesigns.com/img/background-templates/royal-blue-background-design-with-golden-triangle-stripes-sr06012410-1704700322780-cover.webp);
+  background-repeat: inherit;
+  background-size: cover;
+  background-position: fixed;
+  color: aliceblue;
+}
+
+@media screen and (max-width: 599px) {
+  body {
+    margin: 10px 5%;
+  }
+
+  .name {
+    text-align: center;
+  }
+
+  .intro {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile-img {
+    border: 2px solid red !important;
+    height: 40vw !important;
+    width: 40vw !important;
+  }
+
+  .edutech {
+    flex-direction: column;
+  }
+}
+
+nav {
+  font-size: 24px;
+  text-align: center;
+  margin: 20px 0;
+  padding: 30px;
+}
+nav a {
+  padding: 15px;
+  text-decoration: none;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: beige;
+}
+
+nav a:hover {
+  background-color: white;
+}
+
+.intro {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+  font-size: 24px;
+  padding-bottom: 25px;
+  border-bottom: 2px solid aliceblue;
+}
+
+.profile-img {
+  border: 5px solid cyan;
+  border-radius: 50%;
+  height: 250px;
+  width: 250px;
+}
+
+.titles {
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.edutech {
+  display: flex;
+  justify-content: space-between;
+}
+
+ul {
+  list-style-type: ">  ";
+}
+
+a {
+  text-decoration: none;
+  color: red;
+}
+
+a:visited {
+  color: greenyellow;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: orange;
+}
+
+.technical {
+  text-align: left;
+}
+
+table,
+th,
+td,
+tr {
+  border: 2px solid yellow;
+}
+
+th a {
+  color: black;
+}
+
+.contact-me {
+  position: fixed;
+  height: 100px;
+  background-color: aliceblue;
+  border-radius: 100%;
+  right: 30px;
+  bottom: 50px;
+}
+
+.gallery img {
+  height: 60px;
+  width: 60px;
+}
+
+.gallery {
+  position: fixed;
+  padding: 20px;
+  background-color: aliceblue;
+  border-radius: 100%;
+  right: 30px;
+  bottom: 175px;
+}

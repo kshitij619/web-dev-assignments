@@ -1,0 +1,83 @@
+/* The standard size of a credit card is 85.6 mm wide (3.375 in) x 53.98 mm high (2.125 in). 
+They all have rounded corners with a radius of 2.88 mm (0.113 in) to 3.38 mm (0.137 in) 
+and a uniform thickness of 0.76 mm (0.029 in). */
+
+/* color palette for credit card: https://coolors.co/palette/03045e-0077b6-00b4d8-90e0ef-caf0f8 */
+/* color palette for UPI: https://coolors.co/palette/10002b-240046-3c096c-5a189a-7b2cbf-9d4edd-c77dff-e0aaff */
+
+body {
+  margin: 0;
+  padding-top: 8px;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  font-family: "Titillium Web", sans-serif;
+}
+
+body h1 {
+  font-size: 48px;
+  margin: 6px 0 12px;
+}
+
+.bankApp {
+  width: 1260px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.creditCard,
+.upi {
+  padding: 8px 12px;
+  width: 550px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px;
+}
+
+@media screen and (max-width: 1107px) {
+  .bankApp {
+    /* flex-flow: column; */
+    justify-content: center;
+  }
+}
+
+button {
+  box-shadow: 0 0;
+}
+
+input {
+  box-shadow: 0 0;
+}
+
+button:active {
+  opacity: 0.8;
+}
+
+button:hover,
+input:focus-visible {
+  border: none;
+  box-shadow: 0px 0px 5px;
+  transition: box-shadow 100ms ease-out;
+}
+
+h1 {
+  width: 100%;
+  text-align: center;
+}
+
+p,
+div,
+h1,
+h2,
+h3,
+h4 {
+  padding: 0;
+  margin: 0;
+}
+
+/* .creditCard,
+.upi {
+  background-color: rgb(248, 244, 239);
+} */

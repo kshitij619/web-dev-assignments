@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="creditCard.css" />
+    <link rel="stylesheet" href="upi.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Apna Bank</title>
+  </head>
+
+  <body>
+    <h1>Welcome <span id="username">User</span></h1>
+    <section class="bankApp">
+      <div class="creditCard">
+        <h2 style="margin-bottom: 12px; color: #03045e">
+          Deal with your credit card here:
+        </h2>
+
+        <!-- Card details -->
+        <div class="card">
+          <div class="available">
+            <div>
+              <span id="cardNumber">**** **** **** 1314</span>
+            </div>
+            <div>
+              <p id="availableLimit">
+                ₹<span id="availableLimitRupees">100000</span>
+              </p>
+              <p id="availableLimitText">Available Credit Limit</p>
+            </div>
+          </div>
+          <div class="utilized">
+            <div class="limitUtilized">
+              <p>₹<span id="limitUtilizedRupees">0 </span></p>
+              <p>₹<span id="totalBalance">100000</span></p>
+            </div>
+
+            <div id="bar">
+              <div id="progress"></div>
+            </div>
+
+            <div class="limitUtilized">
+              <h4>Limit Utilized</h4>
+              <h4>Total Credit Limit</h4>
+            </div>
+          </div>
+
+          <div class="memeClass">
+            <h3>KSHITIJ ASHOK VYAS</h3>
+            <img id="meme" src="meme.png" alt="Meme image" />
+          </div>
+        </div>
+
+        <div class="functions">
+          <div class="buy">
+            <!-- Last purchase -->
+            <div class="functionsBox text">
+              <h3>Last purchase</h3>
+              <p>₹<span id="lastBoughtTransaction">0</span></p>
+            </div>
+
+            <!-- Buy from Credit Card -->
+            <div class="functionsBox">
+              <input id="ccBuyInput" placeholder="Enter amount for buying" />
+              <button type="button" id="ccBuyButton">Buy</button>
+            </div>
+          </div>
+
+          <!-- Remaining bill amount -->
+          <div class="pay">
+            <div class="functionsBox text">
+              <h3>Remaining bill amount</h3>
+              <p>₹<span id="remainingBillAmount">0</span></p>
+            </div>
+
+            <!-- Pay Bill for Credit Card -->
+            <div class="functionsBox">
+              <input
+                id="ccPayBillInput"
+                placeholder="Enter amount for paying"
+              />
+              <button type="button" id="ccPayBillButton">Pay</button>
+            </div>
+          </div>
+        </div>
+
+        <div style="color: #03045e">
+          <h3>Previous transactions:</h3>
+          <div class="ccTransactions">
+            <div id="ccBuyHistory">
+              <h4>Last bought:</h4>
+            </div>
+            <div id="ccPaymentHistory">
+              <h4>Last payments:</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="upi">
+        <h2 style="margin-bottom: 12px; color: #240046">
+          Deal with your UPI here:
+        </h2>
+        <div class="scanner">
+          <img src="demo-QR-code.png" alt="Demo QR code" />
+        </div>
+
+        <!-- Remaining Balance -->
+        <div class="balance">
+          <p>Remaining Balance</p>
+          <h2>₹<span id="upiBalance">0</span></h2>
+        </div>
+
+        <!-- Buy from UPI -->
+        <div class="functions">
+          <div class="functionsBox">
+            <input id="upiBuyInput" placeholder="Enter amount for buying" />
+            <button type="button" id="upiBuyButton">Buy</button>
+          </div>
+
+          <!-- Deposit in UPI -->
+          <div class="functionsBox">
+            <input
+              id="upiDepositInput"
+              placeholder="Enter amount for depositing"
+            />
+            <button type="button" id="upiDepositButton">Deposit</button>
+          </div>
+        </div>
+
+        <div style="color: #240046">
+          <h3>Previous transactions:</h3>
+          <div class="upiTransactions">
+            <div id="upiPayHistory">
+              <h4>Last payments:</h4>
+            </div>
+            <div id="upiDepositHistory">
+              <h4>Last deposits:</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script src="script.js"></script>
+</html>

@@ -1,0 +1,73 @@
+.scanner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(
+    to bottom,
+    #9d4edd,
+    #c77dff,
+    #e0aaff,
+    #e0aaff,
+    #c77dff,
+    #9d4edd
+  );
+  border-radius: 20px;
+  width: 100%;
+  height: 300px;
+}
+
+.scanner img {
+  object-fit: cover;
+  height: 90%;
+  opacity: 0.4;
+  transition: opacity 1s ease, height 2s ease;
+}
+
+.scanner img:hover {
+  opacity: 1;
+  height: 100%;
+}
+
+#upiBalance {
+  font-size: 34px;
+}
+
+.balance p {
+  font-size: 16px;
+}
+
+.balance {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.upi .functions {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.upi .functions .functionsBox input {
+  padding-left: 8px;
+  background-color: #c77dff;
+  color: #240046;
+  font-weight: 600;
+}
+
+.upi .functions .functionsBox input::placeholder {
+  color: #5a189a;
+  font-weight: 400;
+}
+
+.upi .functions .functionsBox button {
+  font-weight: 600;
+  background-color: #240046;
+  color: #e0aaff;
+}
+
+.upiTransactions {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}

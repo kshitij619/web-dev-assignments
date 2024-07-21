@@ -1,0 +1,82 @@
+.nav-elements {
+  padding: 24px 64px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 1px 2px 0px #0000000f;
+  box-shadow: 0px 1px 3px 0px #0000001a;
+
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: left;
+  color: #6b7280;
+}
+
+.nav2 {
+  display: flex;
+  justify-content: space-around;
+  width: 30%;
+}
+
+.nav2 div {
+  margin: 5px;
+}
+
+.nav2 div img {
+  margin-left: 10px;
+}
+
+.nav3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: Hug (176px) px;
+  height: Hug (42px) px;
+  left: 1056px;
+  gap: 32px;
+  opacity: 0px;
+}
+.dropdown-png {
+  width: 10px;
+}
+
+.nav3 {
+  line-height: 24px;
+
+  width: Hug (176px) px;
+  height: Hug (42px) px;
+  left: 1056px;
+  gap: 32px;
+  opacity: 0px;
+}
+
+.signin,
+.signup {
+  border: none;
+  width: Hug(92px) px;
+  height: Hug(42px) px;
+  padding: 9px 17px 9px 17px;
+  gap: 0px;
+  border-radius: 6px;
+  opacity: 0px;
+
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: left;
+}
+
+.signin {
+  color: #6b7280;
+  background-color: #fff;
+}
+
+.signup {
+  padding: 9px 17px;
+  border: 0;
+  border-radius: 6px;
+  background: #4f46e5;
+  color: #ffffff;
+}
