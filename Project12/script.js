@@ -8,18 +8,31 @@ const creditCard = {
   transaction: [],
 
   previousSession: function () {
-    if (localStorage.getItem("ccTransactions") != null) {
-      cc.transaction = JSON.parse(localStorage.getItem("ccTransactions"));
-      console.log(upi.transaction);
-      for (let i = cc.transaction?.length - 1; i >= 0; i--) {
-        console.log("in for" + i);
-        cc.displayTransaction(cc.transaction[i].amount, i);
+    if (localStorage != null) {
+      if (localStorage.getItem("ccTransactions") != null) {
+        creditCard.transaction = JSON.parse(
+          localStorage.getItem("ccTransactions")
+        );
+        for (let i = creditCard.transaction?.length - 1; i >= 0; i--) {
+          creditCard.displayTransaction(creditCard.transaction[i].amount, i);
+        }
       }
-    }
 
-    if (localStorage.getItem("ccBalance") != null) {
-      cc.balance = parseFloat(localStorage.getItem("ccBalance"));
-      cc.changeBalance();
+      if (localStorage.getItem("lastPurchase") != null) {
+        creditCard.balance = parseFloat(localStorage.getItem("lastPurchase"));
+      }
+
+      if (localStorage.getItem("limitUtilized")) {
+        creditCard.limitUtilized = parseFloat(
+          localStorage.getItem("limitUtilized")
+        );
+      }
+      if (localStorage.getItem("remainingBill")) {
+        creditCard.remainingBill = parseFloat(
+          localStorage.getItem("remainingBill")
+        );
+      }
+      creditCard.update();
     }
   },
 
@@ -29,14 +42,23 @@ const creditCard = {
       time: new Date(),
     };
     creditCard.transaction.unshift(newTransaction);
-    creditCard.addToLS();
+    creditCard.addToLocalStorage();
   },
 
-  addToLS: function () {
+  addToLocalStorage: function () {
     localStorage.setItem(
       "ccTransactions",
       JSON.stringify(creditCard.transaction)
     );
+
+    localStorage.setItem(
+      "lastPurchase",
+      JSON.stringify(Math.abs(creditCard.transaction[0].amount))
+    );
+
+    localStorage.setItem("limitUtilized", Math.abs(creditCard.limitUtilized));
+
+    localStorage.setItem("remainingBill", Math.abs(creditCard.remainingBill));
   },
 
   update: function () {
@@ -54,6 +76,9 @@ const creditCard = {
       (creditCard.limitUtilized / creditCard.maxLimit) * 100;
     const progressBar = document.querySelector("#progress");
     progressBar.style.width = limitUtilizedPercent + "%";
+
+    const lastBought = document.querySelector("#lastBoughtTransaction");
+    lastBought.innerText = Math.abs(creditCard.transaction[0]?.amount);
   },
 
   payBill: function () {
@@ -87,13 +112,7 @@ const creditCard = {
     if (amount <= creditCard.maxLimit - creditCard.limitUtilized) {
       creditCard.limitUtilized += amount;
       creditCard.remainingBill += amount;
-      // creditCard.transaction.push(-amount); // old
-      creditCard.addTransaction(-amount); // new
-
-      const lastBought = document.querySelector("#lastBoughtTransaction");
-      lastBought.innerText = amount;
-      // Change needed here👇
-      // alert(`Successfully bought items worth ₹${amount}.`);
+      creditCard.addTransaction(-amount);
 
       creditCard.update();
       creditCard.displayTransaction(-amount);
@@ -143,9 +162,7 @@ const upi = {
   previousSession: function () {
     if (localStorage.getItem("upiTransactions") != null) {
       upi.transaction = JSON.parse(localStorage.getItem("upiTransactions"));
-      console.log(upi.transaction);
       for (let i = upi.transaction?.length - 1; i >= 0; i--) {
-        console.log("in for" + i);
         upi.displayTransaction(upi.transaction[i].amount, i);
       }
     }
@@ -161,10 +178,10 @@ const upi = {
       time: new Date(),
     };
     upi.transaction.unshift(newTransaction);
-    upi.addToLS();
+    upi.addToLocalStorage();
   },
 
-  addToLS: function () {
+  addToLocalStorage: function () {
     localStorage.setItem("upiTransactions", JSON.stringify(upi.transaction));
     localStorage.setItem("upiBalance", JSON.stringify(upi.balance));
   },
@@ -217,8 +234,6 @@ const upi = {
   },
 
   displayTransaction: function (amount, index = 0) {
-    // debugger;
-    console.log(index);
     const trans = document.createElement("p");
     const Transaction = document.querySelector(".upiTransactions");
     trans.innerHTML =
@@ -244,7 +259,7 @@ const upi = {
   },
 };
 
-// creditCard.previousSession();
+creditCard.previousSession();
 upi.previousSession();
 
 //
@@ -313,11 +328,19 @@ let loginPageDetails = {
     mainSection.classList.remove("hide");
     loginSection.classList.add("hide");
     document.querySelector(".loginError").classList.add("hide");
+    loginPageDetails.timer();
   },
 
   logoutNow: function () {
     mainSection.classList.add("hide");
     loginSection.classList.remove("hide");
+  },
+
+  timer: function () {
+    let sec = 1000;
+    let min = 60 * sec;
+    let time = 2 * min;
+    setTimeout(loginPageDetails.logoutNow, time);
   },
 };
 
