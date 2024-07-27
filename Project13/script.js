@@ -7,7 +7,7 @@
 //   allPostsArray = await result.json();
 // }
 // getPosts();
-let promiseResult = fetch("https://jsonplaceholder.typicode.com/posts");
+let postResult = fetch("https://jsonplaceholder.typicode.com/posts");
 // class AllPosts {
 //   view() {
 //     console.log(allPostsArray);
@@ -17,5 +17,5 @@ let promiseResult = fetch("https://jsonplaceholder.typicode.com/posts");
 // let c1 = new AllPosts();
 
 // c1.view();
-console.log(promiseResult);
+console.log(postResult);
 // console.log(c1.allPostsArray);
