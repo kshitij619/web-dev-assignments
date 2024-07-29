@@ -1,0 +1,123 @@
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+button {
+  margin: 0;
+  padding: 0;
+  display: inline;
+}
+
+body {
+  font-family: "Mukta", sans-serif;
+  font-style: normal;
+  padding-top: 24px;
+}
+
+.allContent {
+  position: relative;
+  display: flex;
+  /* flex-flow: column-reverse nowrap; */
+  justify-content: center;
+}
+
+.navIcon {
+  height: 36px;
+}
+
+.navbar {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  position: fixed;
+  left: 96px;
+  width: 100%;
+  left: 0;
+  background-color: #fff;
+}
+
+.pcSpecific {
+  visibility: hidden;
+}
+
+.mainContent {
+  width: 550px;
+  padding: 0 48px;
+  border-right: 2px solid rgb(159, 159, 159);
+  border-left: 2px solid rgb(159, 159, 159);
+}
+
+.post {
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 0 24px 12px;
+  border-bottom: 2px solid rgb(159, 159, 159);
+}
+
+.userDetails {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 12px 0;
+}
+
+.userIcon {
+  background-color: #a6a6a6;
+  width: 36px;
+  padding: 6px;
+  border-radius: 50%;
+}
+
+.username {
+  color: rgb(92, 92, 92);
+}
+
+.postTitle {
+  margin-bottom: 18px;
+}
+
+.postContent {
+  margin-bottom: 24px;
+}
+
+.postActions {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.icon {
+  width: 18px;
+}
+
+@media (min-width: 1200px) {
+  .allContent {
+    /* flex-flow: row nowrap; */
+  }
+
+  .navbar {
+    flex-flow: column nowrap;
+    width: auto;
+    left: 96px;
+  }
+
+  .navbar div {
+    font-size: 18px;
+    height: 72px;
+    display: flex;
+    align-items: center;
+  }
+
+  .navIcon {
+    width: 36px;
+    margin-right: 12px;
+  }
+  .pcSpecific {
+    visibility: visible;
+  }
+}
