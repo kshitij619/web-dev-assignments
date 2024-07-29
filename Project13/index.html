@@ -17,7 +17,7 @@
     <section class="loginPage">
       <section class="loginSection">
         <!-- login page -->
-        <div class="box loginDiv hide">
+        <div class="box loginDiv">
           <form class="loginForm">
             <div>
               <p class="error loginError hide">**Wrong Credentials</p>
@@ -38,7 +38,7 @@
               />
             </div>
 
-            <button id="loginButton">Login</button>
+            <button type="submit" id="loginButton">Login</button>
             <div style="align-items: center">
               <p>New here??? <span id="signUp">Sign up now</span></p>
             </div>
@@ -46,7 +46,7 @@
         </div>
 
         <!-- sign up page -->
-        <div class="box signUpDiv">
+        <div class="box signUpDiv hide">
           <form class="loginForm">
             <div>
               <label class="formLabel" for="signUpEmailId"
@@ -70,11 +70,7 @@
               />
             </div>
 
-            <button
-              style="background-color: #ffeaae; border: 2px solid #04a777"
-            >
-              Sign Up
-            </button>
+            <button type="submit" id="signUpBtn">Sign Up</button>
             <div style="align-items: center">
               <p>Go back to <span id="login">Login page</span></p>
             </div>

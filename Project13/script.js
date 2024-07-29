@@ -1,6 +1,35 @@
 let posts = fetch("https://jsonplaceholder.typicode.com/posts");
 
-class postFunctions {
+let signUpForm = document.querySelector(".signUpDiv");
+let loginForm = document.querySelector(".loginDiv");
+let mainSection = document.querySelector(".mainSection");
+let loginSection = document.querySelector(".loginSection");
+
+document
+  .querySelector(".loginForm")
+  .addEventListener("submit", function (event) {
+    event.preventDefault();
+  });
+
+/*
+ * Event Listener to show "sign up page" and hide "login page"
+ */
+document.querySelector("#signUp").addEventListener("click", function () {
+  signUpForm.classList.remove("hide");
+  loginForm.classList.add("hide");
+});
+
+/*
+ * Event Listener to show "login page" and hide "sign up page"
+ */
+document.querySelector("#login").addEventListener("click", function () {
+  loginForm.classList.remove("hide");
+  signUpForm.classList.add("hide");
+});
+
+class User {}
+
+class PostFunctions {
   addPost(userId, id, title, body) {
     let postArea = document.querySelector(".mainContent");
     let newPost = document.createElement("div");
@@ -62,6 +91,6 @@ class postFunctions {
   }
 }
 
-let p = new postFunctions();
+let p = new PostFunctions();
 
 p.retrieve();

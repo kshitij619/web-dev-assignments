@@ -79,7 +79,7 @@ body {
   align-items: center;
 }
 
-.loginForm button {
+#loginButton {
   margin: 5px;
   border: none;
   width: 75px;
@@ -87,6 +87,15 @@ body {
   font-weight: 600;
   border-radius: 5px;
   background-color: #04a777;
+  color: #fff;
+}
+
+#loginButton:hover {
+  cursor: pointer;
+  background-color: #ffeaae;
+  border: 2px solid #04a777;
+  color: black;
+  transition: background-color 1s ease-out, color 0.7s ease-out;
 }
 
 .loginForm input {
@@ -113,6 +122,21 @@ body {
 #login:hover {
   color: #04a777;
   cursor: pointer;
+  transition: color 0.5s cubic-bezier(0, 1, 1, 1);
+}
+#signUpBtn {
+  width: 75px;
+  height: 25px;
+  font-weight: 600;
+  border-radius: 5px;
+  background-color: #ffeaae;
+  border: 2px solid #04a777;
+}
+
+#signUpBtn:hover {
+  cursor: pointer;
+  background-color: #04a777;
+  transition: background-color 1s cubic-bezier(0, 0.3, 0.5, 1);
 }
 
 .allContent {
