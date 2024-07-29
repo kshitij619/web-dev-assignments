@@ -16,11 +16,114 @@ body {
   padding-top: 24px;
 }
 
+.loginPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#logoutDiv {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#logout {
+  border: none;
+  color: #ffffff;
+  background-color: red;
+  font-size: 18px;
+  height: 35px;
+  width: 100px;
+  border-radius: 5px;
+  margin: 48px;
+}
+
+#logout:hover {
+  background-color: rgb(230, 2, 2);
+}
+
+#logout:active {
+  background-color: #ffeaae;
+}
+
+.loginSection {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.loginSection {
+  margin-top: 64px;
+  padding: 0 40px;
+  height: 250px;
+  align-items: center;
+}
+.box {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  height: 350px;
+  width: 400px;
+  box-shadow: 2px 2px 8px 3px;
+  border-radius: 10px;
+}
+.box form {
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.loginForm button {
+  margin: 5px;
+  border: none;
+  width: 75px;
+  height: 25px;
+  font-weight: 600;
+  border-radius: 5px;
+  background-color: #04a777;
+}
+
+.loginForm input {
+  border: none;
+  background-color: #ffeaae;
+  border-radius: 5px;
+  padding-left: 5px;
+  height: 25px;
+  width: 200px;
+}
+
+.loginForm div {
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+}
+
+#signUp,
+#login {
+  color: #ff0000;
+}
+#signUp:hover,
+#login:hover {
+  color: #04a777;
+  cursor: pointer;
+}
+
 .allContent {
   position: relative;
   display: flex;
   /* flex-flow: column-reverse nowrap; */
   justify-content: center;
+}
+
+.hide {
+  display: none;
 }
 
 .navIcon {

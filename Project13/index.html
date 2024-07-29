@@ -14,7 +14,76 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <section class="allContent">
+    <section class="loginPage">
+      <section class="loginSection">
+        <!-- login page -->
+        <div class="box loginDiv hide">
+          <form class="loginForm">
+            <div>
+              <p class="error loginError hide">**Wrong Credentials</p>
+              <label class="formLabel" for="loginEmailId">Email:</label>
+              <input
+                id="loginEmailId"
+                type="email"
+                placeholder="Enter email id"
+              />
+            </div>
+
+            <div>
+              <label class="formLabel" for="loginPassword">Password:</label>
+              <input
+                id="loginPassword"
+                type="password"
+                placeholder="Enter password"
+              />
+            </div>
+
+            <button id="loginButton">Login</button>
+            <div style="align-items: center">
+              <p>New here??? <span id="signUp">Sign up now</span></p>
+            </div>
+          </form>
+        </div>
+
+        <!-- sign up page -->
+        <div class="box signUpDiv">
+          <form class="loginForm">
+            <div>
+              <label class="formLabel" for="signUpEmailId"
+                >Enter a new email id :</label
+              >
+              <input
+                id="signUpEmailId"
+                type="email"
+                placeholder="Enter email id"
+              />
+            </div>
+
+            <div>
+              <label class="formLabel" for="signUpPassword"
+                >Your password:</label
+              >
+              <input
+                id="signUpPassword"
+                type="password"
+                placeholder="Enter password"
+              />
+            </div>
+
+            <button
+              style="background-color: #ffeaae; border: 2px solid #04a777"
+            >
+              Sign Up
+            </button>
+            <div style="align-items: center">
+              <p>Go back to <span id="login">Login page</span></p>
+            </div>
+          </form>
+        </div>
+      </section>
+    </section>
+
+    <section class="allContent hide">
       <nav class="navbar">
         <div class="home">
           <img class="navIcon" src="./images/home.png" alt="Home Icon" />
