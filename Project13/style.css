@@ -223,10 +223,6 @@ body {
 }
 
 @media (min-width: 1200px) {
-  .allContent {
-    /* flex-flow: row nowrap; */
-  }
-
   .navbar {
     flex-flow: column nowrap;
     width: auto;
