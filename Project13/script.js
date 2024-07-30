@@ -11,6 +11,12 @@ document
     event.preventDefault();
   });
 
+document
+  .querySelector(".signUpForm")
+  .addEventListener("submit", function (event) {
+    event.preventDefault();
+  });
+
 /*
  * Event Listener to show "sign up page" and hide "login page"
  */
@@ -27,7 +33,70 @@ document.querySelector("#login").addEventListener("click", function () {
   signUpForm.classList.add("hide");
 });
 
-class User {}
+document.querySelector("#signUpBtn").addEventListener("click", function () {
+  const newEmail = document.querySelector("#signUpEmailId").value;
+  const newPassword = document.querySelector("#signUpPassword").value;
+
+  let newUser = new User(newEmail, newPassword);
+  localStorage.setItem("email", newEmail);
+  localStorage.setItem("password", newPassword);
+
+  newUser.loginNow();
+});
+
+class User {
+  constructor(email, password) {
+    this.email = email;
+    this.password = password;
+    this.allContent = document.querySelector(".allContent");
+    this.loginPage = document.querySelector(".loginPage");
+  }
+
+  getDetails() {
+    this.email = document.querySelector("#loginEmailId").value;
+    this.password = document.querySelector("#loginPassword").value;
+    loginPageDetails.checkDetails();
+    document.querySelector("#loginEmailId").value = "";
+    document.querySelector("#loginPassword").value = "";
+  }
+
+  checkUser() {
+    const adminEmail = "admin@gmail.com";
+    const adminPassword = "1234";
+
+    const previousUser = localStorage.getItem("email");
+    const previousPassword = localStorage.getItem("password");
+
+    if (
+      (this.email == adminEmail && this.password == adminPassword) ||
+      (this.email == previousUser && this.password == previousPassword)
+    ) {
+      this.loginNow();
+      document.querySelector(".loginError").classList.add("hide");
+    } // else if(){}
+    else {
+      document.querySelector(".loginError").classList.remove("hide");
+    }
+  }
+
+  loginNow() {
+    this.loginPage.classList.add("hide");
+    this.allContent.classList.remove("hide");
+  }
+
+  logoutNow() {
+    this.loginPage.classList.remove("hide");
+    this.allContent.classList.add("hide");
+  }
+}
+
+document.querySelector("#loginButton").addEventListener("click", function () {
+  const loginEmail = document.querySelector("#loginEmailId").value;
+  const loginPassword = document.querySelector("#loginPassword").value;
+
+  let loginUser = new User(loginEmail, loginPassword);
+  loginUser.checkUser();
+});
 
 class PostFunctions {
   addPost(userId, id, title, body) {
@@ -36,30 +105,30 @@ class PostFunctions {
     newPost.classList.add("post");
     newPost.innerHTML = `
         <span class="userDetails">
-            <img class="userIcon" src="./images/profile.png" alt="User Icon" />
-            <p class="username">user_${userId}</p>
-            <img class="icon" src="./images/more.png" alt="Options" />
+          <img class="userIcon" src="./images/profile.png" alt="User Icon" />
+          <p class="username">user_${userId}</p>
+          <img class="icon" src="./images/more.png" alt="Options" />
+        </span>
+        <h2 class="postTitle">${title}</h2>
+        <p class="postContent">${body}</p>
+        <div class="postActions">
+          <span class="comments">
+            <img class="icon" src="./images/comment.png" alt="" />
           </span>
-          <h2 class="postTitle">${title}</h2>
-          <p class="postContent">${body}</p>
-          <div class="postActions">
-            <span class="comments">
-              <img class="icon" src="./images/comment.png" alt="" />
-            </span>
-            <span class="retweet">
-              <img class="icon" src="./images/retweet.png" alt="" />
-            </span>
-            <span class="like">
-              <img class="icon" src="./images/heart.png" alt="" />
-            </span>
-            <span class="share">
-              <img class="icon" src="./images/share.png" alt="" />
-            </span>
-            <span class="save">
-              <img class="icon" src="./images/save.png" alt="" />
-            </span>
-          </div>
-        `;
+          <span class="retweet">
+            <img class="icon" src="./images/retweet.png" alt="" />
+          </span>
+          <span class="like">
+            <img class="icon" src="./images/heart.png" alt="" />
+          </span>
+          <span class="share">
+            <img class="icon" src="./images/share.png" alt="" />
+          </span>
+          <span class="save">
+            <img class="icon" src="./images/save.png" alt="" />
+          </span>
+        </div>
+      `;
 
     postArea.appendChild(newPost);
   }
