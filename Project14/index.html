@@ -4,8 +4,31 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pokémon</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/navbar.css" />
   </head>
   <body>
+    <nav>
+      <img id="pokeLogo" src="./images/Pokemon-Logo.png" alt="Pokémon Logo" />
+      <div class="search">
+        <p>Search</p>
+        <input id="searchBar" type="search" placeholder="Search a Pokémon" />
+        <img id="searchButton" src="./images/search.png" alt="Search Button" />
+      </div>
+      <div class="profile">
+        <img
+          class="profilePhoto"
+          src="./images/profile.png"
+          alt="Profile Photo"
+        />
+      </div>
+    </nav>
     <section></section>
   </body>
   <script type="module" src="pokemon.js"></script>
