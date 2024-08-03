@@ -12,12 +12,12 @@ div {
 }
 
 body {
-  font-family: "Mukta", sans-serif;
+  font-family: "Shantell Sans", cursive;
 }
 
 nav {
   background-color: #ff0000;
-  /* width: 100%; */
+  height: 64px;
   padding: 0 24px;
   display: flex;
   align-items: center;
@@ -25,44 +25,65 @@ nav {
 }
 
 #pokeLogo {
-  height: 50px;
+  height: 64px;
 }
 
 .search {
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  width: 300px;
+  position: relative;
 }
 
-.search p {
-  color: #ffde00;
-  font-weight: 600;
-  font-size: 18px;
+#searchBar::-webkit-search-decoration,
+#searchBar::-webkit-search-cancel-button,
+#searchBar::-webkit-search-results-button,
+#searchBar::-webkit-search-results-decoration {
+  -webkit-appearance: none;
 }
 
 #searchBar {
-  height: 30px;
-  width: 200px;
+  font-family: "Shantell Sans", cursive;
+  height: 40px;
+  width: 250px;
   border: none;
-  border-radius: 12px;
-  padding: 0 8px;
+  border-radius: 16px;
+  padding: 0 12px;
+  font-size: 12px;
 }
 
 #searchButton {
-  height: 35px;
-}
-
-.profile {
-  background-color: #ffde00;
-  height: 35px;
-  width: 35px;
-  border-radius: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  height: 32px;
+  position: absolute;
+  right: 8px;
 }
 
 .profilePhoto {
-  height: 25px;
+  background-color: #ffde00;
+  border-radius: 20px;
+  border: 3px solid #3b4cca;
+  height: 27px;
+  width: 27px;
+  padding: 3px;
+}
+
+@media screen and (max-width: 499px) {
+  nav {
+    height: 50px;
+    padding: 0 4px;
+  }
+  #pokeLogo {
+    height: 50px;
+  }
+
+  .profilePhoto {
+    height: 20px;
+    width: 20px;
+  }
+
+  #searchBar {
+    height: 30px;
+    width: 40vw;
+    min-width: 130px;
+    border-radius: 10px;
+  }
 }

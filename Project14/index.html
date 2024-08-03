@@ -3,33 +3,61 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pokémon</title>
+    <title>Pokédex Pro</title>
+    <link rel="icon" type="image/x-icon" href="./images/pokemon-icon.png" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./css/navbar.css" />
+
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/content.css" />
   </head>
   <body>
     <nav>
       <img id="pokeLogo" src="./images/Pokemon-Logo.png" alt="Pokémon Logo" />
       <div class="search">
-        <p>Search</p>
-        <input id="searchBar" type="search" placeholder="Search a Pokémon" />
+        <input id="searchBar" type="search" placeholder="Find pokémon" />
         <img id="searchButton" src="./images/search.png" alt="Search Button" />
       </div>
-      <div class="profile">
-        <img
-          class="profilePhoto"
-          src="./images/profile.png"
-          alt="Profile Photo"
-        />
-      </div>
+      <img
+        class="profilePhoto"
+        src="./images/profile.png"
+        alt="Profile Photo"
+      />
     </nav>
-    <section></section>
+
+    <!-- <section class="content">
+      <div class="box">
+        <img class="pokemonImage" src="images/charizard.png" alt="Pikachu" />
+        <p class="pokemonTag">#006</p>
+        <h2 class="pokemonName">Charizard</h2>
+        <div class="typeDiv">
+          <button class="type fire">Fire</button>
+          <button class="type flying">Flying</button>
+        </div>
+      </div>
+
+      <div class="box">
+        <img class="pokemonImage" src="images/pikachu.png" alt="Pikachu" />
+
+        <p class="pokemonTag">#025</p>
+        <h2 class="pokemonName">Pikachu</h2>
+        <p>
+          a electric type Gmax form Gmax pikachu WARNING not a pokemon which is
+          not in contact with humans but will be in contact with you.
+        </p>
+        <div class="typeDiv">
+          <button class="type electric">Electric</button>
+        </div>
+      </div>
+    </section> -->
+    <section class="content"></section>
   </body>
-  <script type="module" src="pokemon.js"></script>
+  <script src="pokemon.js"></script>
 </html>
+
+<!-- scan pokemon cards and count how many pokemon cards you have -->

@@ -1,0 +1,193 @@
+.content {
+  padding: 32px 100px 200px;
+  position: relative;
+  display: grid;
+  place-items: center;
+  /* flex-flow: row wrap;
+  justify-content: space-around; */
+}
+
+@media screen and (min-width: 1080px) {
+  .content {
+    grid-template-columns: repeat(5, auto);
+  }
+}
+
+@media (min-width: 1000px) and (max-width: 1079px) {
+  .content {
+    grid-template-columns: repeat(4, auto);
+  }
+}
+
+@media (min-width: 650px) and (max-width: 999px) {
+  .content {
+    grid-template-columns: repeat(3, auto);
+  }
+}
+
+@media (min-width: 430px) and (max-width: 649px) {
+  .content {
+    grid-template-columns: repeat(2, auto);
+  }
+}
+
+@media screen and (max-width: 429px) {
+  .content {
+    grid-template-columns: repeat(1, auto);
+  }
+}
+
+.box {
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 12px;
+  /* height: 350px; */
+  width: 175px;
+  border-radius: 15px;
+  position: relative;
+  bottom: 0;
+  margin-bottom: 48px;
+}
+
+.box:hover {
+  cursor: pointer;
+  bottom: 4px;
+  box-shadow: 0px 2px 5px;
+  transition: bottom 0.5s ease-in, box-shadow 0.5s ease-in;
+}
+
+.box:active {
+  box-shadow: inset 0px 2px 5px;
+  background-color: #f9f9f9;
+}
+
+.pokemonImage {
+  background-color: #eeeeee;
+  border-radius: 15px;
+  height: 175px;
+}
+
+.pokemonTag {
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.pokemonName {
+  text-align: center;
+  font-size: 18px;
+}
+
+.typeDiv {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.type {
+  border: none;
+  padding: 0;
+  margin-top: 5px;
+  font-family: "Shantell Sans", cursive;
+  font-weight: 600;
+  height: 24px;
+  min-width: 70px;
+  max-width: 70px;
+  font-size: 12px;
+  border-radius: 5px;
+}
+
+.normal {
+  color: black;
+  background-color: #f6f6f6;
+}
+
+.fighting {
+  color: crimson;
+  background-color: orange;
+}
+
+.flying {
+  color: darkblue;
+  background-image: linear-gradient(aqua, lightgray);
+}
+
+.poison {
+  color: white;
+  background-color: violet;
+}
+
+.ground {
+  color: blanchedalmond;
+  background-color: chocolate;
+}
+
+.rock {
+  color: white;
+  background-image: linear-gradient(darkslategray, dimgrey, darkslategray);
+}
+
+.bug {
+  color: black;
+  background-color: greenyellow;
+}
+
+.ghost {
+  color: antiquewhite;
+  background-color: purple;
+}
+
+.steel {
+  color: black;
+  background-image: linear-gradient(gray, white, gray);
+}
+
+.fire {
+  color: white;
+  background-color: red;
+}
+
+.water {
+  color: navy;
+  background-color: aqua;
+}
+
+.grass {
+  color: white;
+  background-color: forestgreen;
+}
+
+.electric {
+  color: red;
+  background-color: yellow;
+}
+
+.psychic {
+  color: white;
+  background-color: blueviolet;
+}
+
+.ice {
+  color: darkblue;
+  background-color: aquamarine;
+}
+
+.dragon {
+  color: indigo;
+  background-image: linear-gradient(purple, violet, purple);
+}
+
+.dark {
+  color: white;
+  background-color: dimgrey;
+}
+
+.fairy {
+  color: rgb(249, 34, 141);
+  background-color: pink;
+}
+
+@media screen and (max-width: 799px) {
+  .content {
+    padding: 16px;
+  }
+}
