@@ -87,3 +87,11 @@ nav {
     border-radius: 10px;
   }
 }
+
+.hide {
+  display: none;
+  visibility: hidden;
+  height: 0;
+  width: 0;
+  order: 200;
+}
