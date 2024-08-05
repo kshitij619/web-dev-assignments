@@ -26,7 +26,7 @@ let searchInformation = [];
 async function getResult() {
   try {
     let result = await fetch(
-      "https://pokeapi.co/api/v2/pokemon/?offset=0&limit=1000"
+      "https://pokeapi.co/api/v2/pokemon/?offset=0&limit=300"
     );
     let all = await result.json();
 
@@ -88,7 +88,7 @@ document.addEventListener("click", (e) => {
 async function checkPokemon(foundId) {
   try {
     let result = await fetch(
-      "https://pokeapi.co/api/v2/pokemon/?offset=0&limit=1000"
+      "https://pokeapi.co/api/v2/pokemon/?offset=0&limit=300"
     );
     let pokemonBase = await result.json();
     // console.log(pokemonBase);
@@ -192,7 +192,8 @@ async function printAllInformation(url) {
 getResult();
 
 document.querySelector("#searchBar").addEventListener("input", (e) => {
-  const value = e.target.value;
+  const value = e.target.value.toLowerCase();
+  console.log(value);
   searchInformation.forEach((info) => {
     const isVisible = info.innerText.includes(value);
     info.classList.toggle("hide", !isVisible);
